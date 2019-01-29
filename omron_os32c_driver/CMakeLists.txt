@@ -37,6 +37,13 @@ target_link_libraries(omron_os32c_node
   ${Boost_LIBRARIES}
 )
 
+add_executable(omron_os32c_node src/os32c_node_IPC.cpp)
+target_link_libraries(os32c_node_IPC
+        omron_os32c
+        ${catkin_LIBRARIES}
+        ${Boost_LIBRARIES}
+        )
+
 ## Mark executables and libraries for installation
 install(TARGETS omron_os32c omron_os32c_node scanner_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
